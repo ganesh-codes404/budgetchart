@@ -2,7 +2,7 @@ const ctx = document.getElementById('expenseChart').getContext('2d');
 
 let categories = [];
 let amounts = [];
-
+//chart styff
 const expenseChart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -40,11 +40,11 @@ document.getElementById('expense-form').addEventListener('submit', function (e) 
         const existingIndex = categories.indexOf(category);
 
         if (existingIndex === -1) {
-            // New category
+            
             categories.push(category);
             amounts.push(amount);
         } else {
-            // Replace existing amount for the category
+            
             amounts[existingIndex] = amount;
         }
 
